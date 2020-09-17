@@ -1,0 +1,25 @@
+{
+  "xsappname": "vsuiauth",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+      "name": "uaa.user",
+      "description": "UAA"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Token_Exchange",
+      "description": "UAA",
+      "scope-references": [
+        "uaa.user"
+      ]
+    }
+  ],
+ "authorities":["$ACCEPT_GRANTED_AUTHORITIES"],
+ "oauth2-configuration": {
+                    "token-validity": 900, 
+                    "redirect-uris": ["https://abad6bb9trial-workspaces-ws-l99fw-app1.eu10.trial.applicationstudio.cloud.sap","https://abad6bb9trial-workspaces-ws-l99fw-app1.eu10.trial.applicationstudio.cloud.sap/login/callback"] 
+ }
+}
